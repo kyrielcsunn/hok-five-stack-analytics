@@ -46,6 +46,7 @@ sub-agent 使用边界：
 - 本轮已通过的验证：临时库 `import-review-json.js` 18 份成功 + 真实库 18 份成功；`approveReviewMatch` 15 份零错误，`rejectReviewMatch` 3 份零错误；`check:phase2`（8 表 / 9 朋友 / 130 英雄）、`check:phase7`、`check:phase8` 均通过；`node node_modules/vite/bin/vite.js build apps/web` 生成 `apps/web/dist`，`public/export/report-data.json` 与 `apps/web/dist/export/report-data.json` 同步为 51 局口径（748957 字节）。
 - batch-003 OCR 录入产物：`data/imports/batch-003` 共 36 张 PNG，按文件名两张一组整理为 18 局；其中 001-008、010-016 为正式候选并已批准；006/016 IMG_8535 / IMG_8555 不是标准详情页，detail 指标保留 `null` 已入库；009/017/018 仅 1 位已知朋友，已 rejected 且不纳入统计。
 - Vercel 生产已切到 51 局口径：本轮发布部署 `dpl_He1zzzhpGNuujofd2hSAnkjEyZDr`，主域名 alias `https://hok-five-stack-analytics.vercel.app`，线上 `/`、`/database`、`/matches/match:batch-003:001`、`/export/report-data.json` 均返回 200，线上 JSON 验证为 `period:all-current` / 51 局 / 阵容门槛 6 场 / 必输榜门槛 3 场 / 包含 batch-003 数据。
+- GitHub Pages 双部署已上线：仓库 `https://github.com/kyrielcsunn/hok-five-stack-analytics`（public），站点 `https://kyrielcsunn.github.io/hok-five-stack-analytics/`，由 `.github/workflows/pages.yml` 在 push 时用 `GITHUB_PAGES=1` build。Vite `base` 通过环境变量在 `/` 与 `/hok-five-stack-analytics/` 之间切换，SPA fallback 走 spa-github-pages 方案（`public/404.html` 编码 + `apps/web/index.html` 头部解码），首屏 HTML 200、`/export/report-data.json` 200 已 curl 确认；手机网络对比验证留给用户。
 - 新电脑环境差异：原 node_modules 缺 Windows 原生 rollup 二进制 `@rollup/rollup-win32-x64-msvc`，已用 `npm install @rollup/rollup-win32-x64-msvc --no-save` 临时补齐；`vite` CLI 不在 PATH 上，build 必须用 `node node_modules/vite/bin/vite.js`。Vercel CLI 在新电脑配登录后已可用，账号仍为 `kyrieaiplayer-6650`，`.vercel/project.json` 复用旧链接。
 - 历史保留：用户已确认 `吧唧小喵` 是朋友，并已加入 `server/db/friends.js`；`鸽` 在 026 使用明世隐已修正。
 
@@ -82,8 +83,9 @@ HOK_API_TARGET=http://127.0.0.1:3001 node node_modules/vite/bin/vite.js apps/web
 下一步待办：
 
 1. 在新电脑配好 Vercel CLI 登录后，发布 51 局口径到生产，再做线上验证。
-2. 如有 batch-004 截图，按 batch-003 流程处理；流水线脚本已就绪。
-3. 分路复核仍暂停；剩余 `manual_guess` / `low` 不继续逐项检查，除非榜单/单局出现明显异常。
+2. 手机网络下对比测试两个生产 URL：`https://hok-five-stack-analytics.vercel.app/` 和 `https://kyrielcsunn.github.io/hok-five-stack-analytics/`，看哪个能稳定打开。如果两个都白屏，说明根因不在 CDN 网络层，应回到浏览器侧排查（错误 banner 已加在 main.jsx 末尾，会显示 window.error / unhandledrejection 详情）。
+3. 如有 batch-004 截图，按 batch-003 流程处理；流水线脚本已就绪。
+4. 分路复核仍暂停；剩余 `manual_guess` / `low` 不继续逐项检查，除非榜单/单局出现明显异常。
 
 注意事项：
 
@@ -102,6 +104,7 @@ tmpdir=$(mktemp -d); HOK_DB_PATH="$tmpdir/hok.sqlite" node --experimental-sqlite
 ## 1. 当前状态
 
 - 项目阶段：batch-001 30 局 + batch-002 6 局 + batch-003 15 局，共 51 局正式入库；batch-001:012、batch-001:032、batch-003:009/017/018 共 5 局 rejected；真实本地库无待审遗留局。Phase 10 batch-003 追加导入流水线已完成审核入库 + 报告期刷新 + 静态导出 + 前端 build + Vercel 生产发布；线上主域名已切到 51 局口径。
+- 双部署在线：Vercel `https://hok-five-stack-analytics.vercel.app/` + GitHub Pages `https://kyrielcsunn.github.io/hok-five-stack-analytics/`（仓库 `kyrielcsunn/hok-five-stack-analytics`，public，由 `.github/workflows/pages.yml` 自动构建）。两个 CDN 都已 curl 确认首屏 HTML + `/export/report-data.json` 返回 200，手机网络下哪个稳定由用户人工对比。
 - MVP 架构：local-first，单机管理员工具 + 静态朋友站。
 - 技术栈：Vite/React + 本地 Node API + SQLite。
 - OCR：Codex-assisted OCR，不要求独立 API key。
@@ -116,7 +119,7 @@ tmpdir=$(mktemp -d); HOK_DB_PATH="$tmpdir/hok.sqlite" node --experimental-sqlite
 
 暂停点后的推荐执行顺序：
 
-1. 在手机视口下手工打开 `https://hok-five-stack-analytics.vercel.app/`、`/database`、单局详情，确认首页榜单文案、动态门槛、Database 筛选和 console 无 error。（curl 已确认 4 条路由 200，但浏览器侧没人工核过。）
+1. 手机网络下对比测试两个生产 URL：`https://hok-five-stack-analytics.vercel.app/` 和 `https://kyrielcsunn.github.io/hok-five-stack-analytics/`（含 `/database`、单局详情），确认首页榜单文案、动态门槛、Database 筛选和 console 无 error。两个 CDN 都已 curl 确认 4 条路由 200，但浏览器侧没人工核过；优先用稳定打开的那一个对外发，另一个作为备份。如果两个都白屏，根因不在 CDN，回浏览器侧看 main.jsx 加在底部的错误 banner 信息。
 2. batch-003 005-007、010-016 的 `manual_guess`/`low` 分路按用户决策暂不继续逐项检查；如后续榜单/单局明显不合理再回头修。
 3. 032、batch-001:012、batch-003:009/017/018 持续保持 rejected，不纳入正式库、报告期或导出。
 4. 后续如有新批次（batch-004），仍按 batch-003 同样流程：整理截图 → OCR 生成 review JSON → 临时库验证 → 真实库导入审核 → 刷新报告期/导出/build → 发布。
@@ -390,3 +393,5 @@ MVP 完成时必须满足：
 | 018 | IMG_8558 / IMG_8559 | 建议拒绝 | 仅识别到 1 位已知朋友 `别压力我ok？`。 |
 
 2026-06-14 batch-003 入库 + 发布记录（新电脑首次工作）：用户切换到 Windows 机器 `C:\Users\kyrielcsun\hok-five-stack-analytics`，全局 `node v24.14.0` 在 PATH，`vite` 不在 PATH（须用 `node node_modules/vite/bin/vite.js`），node_modules 缺 Windows 原生 `@rollup/rollup-win32-x64-msvc`，已用 `npm install @rollup/rollup-win32-x64-msvc --no-save` 临时补齐。已备份真实库到 `data/hok.sqlite.backup-before-batch-003-20260614-211540`。已跑 `node --experimental-sqlite scripts/import-review-json.js data/imports/batch-003/matches`，18 份 review JSON 写入真实审核队列。新增 `scripts/batch-003-approve-reject.mjs`（直接调用 `approveReviewMatch` / `rejectReviewMatch`）批量处理：001-008、010-016 共 15 局已批准入库，009/017/018 共 3 局已 rejected，零错误。`scripts/create-report-period.js --id=period:all-current --name="累计 51 局战报" --replace` 把公开报告期刷新到 51 局，描述更新为包含 batch-001/002/003。`scripts/export-static-data.js` 导出 `public/export/report-data.json`（748957 字节，friend_player_count = 255）。`node node_modules/vite/bin/vite.js build apps/web` 通过，`apps/web/dist/export/report-data.json` 已同步刷新。验证通过：`check:phase2`（8 表 / 9 朋友 / 130 英雄 / 庄周搜索 1）、`check:phase7`、`check:phase8`；51 局口径下 `best_lineup_min_lane_games = 6`、`hero_losing_min_games = 3`，`ignored_match_ids` 为空。用户确认 Vercel CLI 已登录后，`npx vercel whoami` 返回 `kyrieaiplayer-6650`，`npx vercel --prod --yes` 上传 775.7KB 完成生产部署 `dpl_He1zzzhpGNuujofd2hSAnkjEyZDr`，主域名 alias `https://hok-five-stack-analytics.vercel.app`。线上验证：`/`、`/database`、`/matches/match:batch-003:001`、`/export/report-data.json` 均 200；线上 JSON 解析为 `period:all-current` / 51 局 / 阵容门槛 6 场 / 必输榜门槛 3 场，包含 batch-003 数据。手机视口浏览器侧人工核验仍由用户后续完成。
+
+2026-06-14 GitHub Pages 双部署记录：用户反馈 Vercel 主域名在手机网络上仍打不开（白屏），遂在 GitHub `kyrielcsunn` 账号下新建 public 仓库 `kyrielcsunn/hok-five-stack-analytics`，走 GitHub Actions + Pages 双部署。代码层改动：`apps/web/vite.config.js` 增加 `base` 环境变量分流（`GITHUB_PAGES=1` 时 base = `/hok-five-stack-analytics/`，其他情况 base = `/`）；`apps/web/index.html` 头部新增 spa-github-pages 解码脚本（把 `?/path` query 还原为 pathname）；`public/404.html` 新增 spa-github-pages 编码脚本（pathSegmentsToKeep = 1）；`apps/web/src/main.jsx` 中 `useStaticExport` 的 fetch URL 改为 `${import.meta.env.BASE_URL}export/report-data.json` 以兼容 base 前缀；HTML 中的 `<link rel="preload" as="fetch">` 由 Vite 自动加 base 前缀，无需改。新增 `.github/workflows/pages.yml`：Node 20 + `npm install` + `GITHUB_PAGES=1 npm run build:web` + `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4`。`.gitignore` 增加 `.codex-logs/` 以排除调试日志。git config global 设为 `kyrielcsunn / kyrielcsunn@users.noreply.github.com`。`git init -b main` + `git add .`（46 个文件，跳过 node_modules / data/imports / data/screenshots / data/hok.sqlite / .codex-logs / .vercel / dist）+ initial commit。`gh auth refresh -s workflow --hostname github.com` 由用户在另一终端完成（gh CLI 默认 token 缺 workflow scope，无法 push 含 workflow 文件的 commit）。`gh repo create kyrielcsunn/hok-five-stack-analytics --public --source . --remote origin --push` 完成首推。`gh api -X POST repos/kyrielcsunn/hok-five-stack-analytics/pages -f build_type=workflow` 启用 Pages with GitHub Actions source（注意 git bash 下 endpoint 不能带 leading slash，否则会被当作文件系统路径重写）。首跑 workflow 因 Pages 未开启时 `actions/configure-pages@v5` 报 "Get Pages site failed Not Found" 而失败；启用 Pages 后 `gh run rerun 27502381825` 重跑成功，build + deploy 各 8 秒。验证通过：`curl -sI https://kyrielcsunn.github.io/hok-five-stack-analytics/` 200（HTML 2391 字节，含 inline loader），`/export/report-data.json` 200（748957 字节）。Vercel 部署保留，双部署并行；手机网络下哪个稳定由用户后续验证。已知：Node 20 GitHub Actions 自 2026-06-16 起将默认升级到 Node 24，本 workflow 仍用 Node 20，目前 warning 不阻塞，下次触及 workflow 时可一并升级 `actions/upload-pages-artifact@v4` 等。本地 `apps/web/dist` 已用默认 base="/" 重新 build，避免影响本地 preview / Vercel；GitHub Pages 部署的产物由 GitHub Actions 在 CI 内重新 build。

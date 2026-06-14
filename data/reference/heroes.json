@@ -1,0 +1,1726 @@
+{
+  "version": "2026-06-13-official-herolist",
+  "last_updated": "2026-06-13",
+  "source_note": "英雄名、官网编号、拼音 id 和职业来自王者荣耀官网 herolist.json；default_lanes 为项目按官网职业映射得到的 MVP 默认分路，审核时可人工修正。",
+  "source_url": "https://pvp.qq.com/web201605/js/herolist.json",
+  "role_type_map": {
+    "1": "战士",
+    "2": "法师",
+    "3": "坦克",
+    "4": "刺客",
+    "5": "射手",
+    "6": "辅助"
+  },
+  "lane_mapping_note": {
+    "战士": [
+      "对抗路"
+    ],
+    "法师": [
+      "中路"
+    ],
+    "坦克": [
+      "对抗路",
+      "游走"
+    ],
+    "刺客": [
+      "打野"
+    ],
+    "射手": [
+      "发育路"
+    ],
+    "辅助": [
+      "游走"
+    ]
+  },
+  "heroes": [
+    {
+      "id": "lianpo",
+      "name": "廉颇",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "105",
+      "official_roles": [
+        "坦克"
+      ]
+    },
+    {
+      "id": "xiaoqiao",
+      "name": "小乔",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "106",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "zhaoyun",
+      "name": "赵云",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "打野"
+      ],
+      "official_ename": "107",
+      "official_roles": [
+        "战士",
+        "刺客"
+      ]
+    },
+    {
+      "id": "mozi",
+      "name": "墨子",
+      "aliases": [],
+      "default_lanes": [
+        "中路",
+        "对抗路"
+      ],
+      "official_ename": "108",
+      "official_roles": [
+        "法师",
+        "战士"
+      ]
+    },
+    {
+      "id": "daji",
+      "name": "妲己",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "109",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "yingzheng",
+      "name": "嬴政",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "110",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "sunshangxiang",
+      "name": "孙尚香",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "111",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "lubanqihao",
+      "name": "鲁班七号",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "112",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "zhuangzhou",
+      "name": "庄周",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "对抗路"
+      ],
+      "official_ename": "113",
+      "official_roles": [
+        "辅助",
+        "坦克"
+      ]
+    },
+    {
+      "id": "liushan",
+      "name": "刘禅",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "对抗路"
+      ],
+      "official_ename": "114",
+      "official_roles": [
+        "辅助",
+        "坦克"
+      ]
+    },
+    {
+      "id": "gaojianli",
+      "name": "高渐离",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "115",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "ake",
+      "name": "阿轲",
+      "aliases": [
+        "荆轲"
+      ],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "116",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "zhongwuyan",
+      "name": "钟无艳",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "117",
+      "official_roles": [
+        "战士",
+        "坦克"
+      ]
+    },
+    {
+      "id": "sunbin",
+      "name": "孙膑",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "中路"
+      ],
+      "official_ename": "118",
+      "official_roles": [
+        "辅助",
+        "法师"
+      ]
+    },
+    {
+      "id": "bianque",
+      "name": "扁鹊",
+      "aliases": [],
+      "default_lanes": [
+        "中路",
+        "对抗路"
+      ],
+      "official_ename": "119",
+      "official_roles": [
+        "法师",
+        "战士"
+      ]
+    },
+    {
+      "id": "baiqi",
+      "name": "白起",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "120",
+      "official_roles": [
+        "坦克"
+      ]
+    },
+    {
+      "id": "miyue",
+      "name": "芈月",
+      "aliases": [],
+      "default_lanes": [
+        "中路",
+        "对抗路"
+      ],
+      "official_ename": "121",
+      "official_roles": [
+        "法师",
+        "战士"
+      ]
+    },
+    {
+      "id": "lvbu",
+      "name": "吕布",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "123",
+      "official_roles": [
+        "战士",
+        "坦克"
+      ]
+    },
+    {
+      "id": "zhouyv",
+      "name": "周瑜",
+      "aliases": [],
+      "default_lanes": [
+        "中路",
+        "对抗路"
+      ],
+      "official_ename": "124",
+      "official_roles": [
+        "法师",
+        "战士"
+      ]
+    },
+    {
+      "id": "xiahoudun",
+      "name": "夏侯惇",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "126",
+      "official_roles": [
+        "坦克",
+        "战士"
+      ]
+    },
+    {
+      "id": "zhenji",
+      "name": "甄姬",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "127",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "caocao",
+      "name": "曹操",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "128",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "dianwei",
+      "name": "典韦",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "129",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "gongbenwuzang",
+      "name": "宫本武藏",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "打野"
+      ],
+      "official_ename": "130",
+      "official_roles": [
+        "战士",
+        "刺客"
+      ]
+    },
+    {
+      "id": "libai",
+      "name": "李白",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "131",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "makeboluo",
+      "name": "马可波罗",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "132",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "direnjie",
+      "name": "狄仁杰",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "133",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "damo",
+      "name": "达摩",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "134",
+      "official_roles": [
+        "战士",
+        "坦克"
+      ]
+    },
+    {
+      "id": "xiangyu",
+      "name": "项羽",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "135",
+      "official_roles": [
+        "坦克",
+        "战士"
+      ]
+    },
+    {
+      "id": "wuzetian",
+      "name": "武则天",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "136",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "laofuzi",
+      "name": "老夫子",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "139",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "guanyu",
+      "name": "关羽",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "140",
+      "official_roles": [
+        "战士",
+        "坦克"
+      ]
+    },
+    {
+      "id": "diaochan",
+      "name": "貂蝉",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "141",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "anqila",
+      "name": "安琪拉",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "142",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "chengyaojin",
+      "name": "程咬金",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "144",
+      "official_roles": [
+        "坦克"
+      ]
+    },
+    {
+      "id": "luna",
+      "name": "露娜",
+      "aliases": [],
+      "default_lanes": [
+        "打野",
+        "中路"
+      ],
+      "official_ename": "146",
+      "official_roles": [
+        "刺客",
+        "法师"
+      ]
+    },
+    {
+      "id": "jiangziya",
+      "name": "姜子牙",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "148",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "liubang",
+      "name": "刘邦",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走",
+        "中路"
+      ],
+      "official_ename": "149",
+      "official_roles": [
+        "坦克",
+        "法师"
+      ]
+    },
+    {
+      "id": "hanxin",
+      "name": "韩信",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "150",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "wangzhaojun",
+      "name": "王昭君",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "152",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "lanlingwang",
+      "name": "兰陵王",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "153",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "huamulan",
+      "name": "花木兰",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "154",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "zhangliang",
+      "name": "张良",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "156",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "buzhihuowu",
+      "name": "不知火舞",
+      "aliases": [],
+      "default_lanes": [
+        "打野",
+        "中路"
+      ],
+      "official_ename": "157",
+      "official_roles": [
+        "刺客",
+        "法师"
+      ]
+    },
+    {
+      "id": "nakelulu",
+      "name": "娜可露露",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "162",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "jvyoujing",
+      "name": "橘右京",
+      "aliases": [],
+      "default_lanes": [
+        "打野",
+        "对抗路"
+      ],
+      "official_ename": "163",
+      "official_roles": [
+        "刺客",
+        "战士"
+      ]
+    },
+    {
+      "id": "yase",
+      "name": "亚瑟",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "166",
+      "official_roles": [
+        "战士",
+        "坦克"
+      ]
+    },
+    {
+      "id": "sunwukong",
+      "name": "孙悟空",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "167",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "niumo",
+      "name": "牛魔",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "对抗路"
+      ],
+      "official_ename": "168",
+      "official_roles": [
+        "辅助",
+        "坦克"
+      ]
+    },
+    {
+      "id": "houyi",
+      "name": "后羿",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "169",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "liubei",
+      "name": "刘备",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "170",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "zhangfei",
+      "name": "张飞",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "171",
+      "official_roles": [
+        "坦克",
+        "辅助"
+      ]
+    },
+    {
+      "id": "liyuanfang",
+      "name": "李元芳",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "173",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "yuji",
+      "name": "虞姬",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "174",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "zhongkui",
+      "name": "钟馗",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "对抗路"
+      ],
+      "official_ename": "175",
+      "official_roles": [
+        "辅助",
+        "坦克"
+      ]
+    },
+    {
+      "id": "yangjian",
+      "name": "杨戬",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "178",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "yadianna",
+      "name": "雅典娜",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "打野"
+      ],
+      "official_ename": "183",
+      "official_roles": [
+        "战士",
+        "刺客"
+      ]
+    },
+    {
+      "id": "caiwenji",
+      "name": "蔡文姬",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "中路"
+      ],
+      "official_ename": "184",
+      "official_roles": [
+        "辅助",
+        "法师"
+      ]
+    },
+    {
+      "id": "taiyizhenren",
+      "name": "太乙真人",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "对抗路"
+      ],
+      "official_ename": "186",
+      "official_roles": [
+        "辅助",
+        "坦克"
+      ]
+    },
+    {
+      "id": "nezha",
+      "name": "哪吒",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "180",
+      "official_roles": [
+        "战士",
+        "坦克"
+      ]
+    },
+    {
+      "id": "zhugeliang",
+      "name": "诸葛亮",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "190",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "huangzhong",
+      "name": "黄忠",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "192",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "daqiao",
+      "name": "大乔",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "中路"
+      ],
+      "official_ename": "191",
+      "official_roles": [
+        "辅助",
+        "法师"
+      ]
+    },
+    {
+      "id": "donghuangtaiyi",
+      "name": "东皇太一",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "中路"
+      ],
+      "official_ename": "187",
+      "official_roles": [
+        "辅助",
+        "法师"
+      ]
+    },
+    {
+      "id": "ganjiangmoye",
+      "name": "干将莫邪",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "182",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "guiguzi",
+      "name": "鬼谷子",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "中路"
+      ],
+      "official_ename": "189",
+      "official_roles": [
+        "辅助",
+        "法师"
+      ]
+    },
+    {
+      "id": "kai",
+      "name": "铠",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "193",
+      "official_roles": [
+        "战士",
+        "坦克"
+      ]
+    },
+    {
+      "id": "bailishouyue",
+      "name": "百里守约",
+      "aliases": [],
+      "default_lanes": [
+        "发育路",
+        "打野"
+      ],
+      "official_ename": "196",
+      "official_roles": [
+        "射手",
+        "刺客"
+      ]
+    },
+    {
+      "id": "bailixuance",
+      "name": "百里玄策",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "195",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "sulie",
+      "name": "苏烈",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "对抗路"
+      ],
+      "official_ename": "194",
+      "official_roles": [
+        "辅助",
+        "坦克"
+      ]
+    },
+    {
+      "id": "mengqi",
+      "name": "梦奇",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走",
+        "中路"
+      ],
+      "official_ename": "198",
+      "official_roles": [
+        "坦克",
+        "法师"
+      ]
+    },
+    {
+      "id": "nvwa",
+      "name": "女娲",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "179",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "mingshiyin",
+      "name": "明世隐",
+      "aliases": [],
+      "default_lanes": [
+        "游走"
+      ],
+      "official_ename": "501",
+      "official_roles": [
+        "辅助"
+      ]
+    },
+    {
+      "id": "gongsunli",
+      "name": "公孙离",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "199",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "yangyuhuan",
+      "name": "杨玉环",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "176",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "peiqinhu",
+      "name": "裴擒虎",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "502",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "yixing",
+      "name": "弈星",
+      "aliases": [
+        "奕星"
+      ],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "197",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "kuangtie",
+      "name": "狂铁",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "503",
+      "official_roles": [
+        "战士",
+        "坦克"
+      ]
+    },
+    {
+      "id": "milaidi",
+      "name": "米莱狄",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "504",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "yuange",
+      "name": "元歌",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "125",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "sunce",
+      "name": "孙策",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "510",
+      "official_roles": [
+        "坦克",
+        "战士"
+      ]
+    },
+    {
+      "id": "simayi",
+      "name": "司马懿",
+      "aliases": [],
+      "default_lanes": [
+        "打野",
+        "中路"
+      ],
+      "official_ename": "137",
+      "official_roles": [
+        "刺客",
+        "法师"
+      ]
+    },
+    {
+      "id": "dunshan",
+      "name": "盾山",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "对抗路"
+      ],
+      "official_ename": "509",
+      "official_roles": [
+        "辅助",
+        "坦克"
+      ]
+    },
+    {
+      "id": "jialuo",
+      "name": "伽罗",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "508",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "shenmengxi",
+      "name": "沈梦溪",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "312",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "lixin",
+      "name": "李信",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "507",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "shangguanwaner",
+      "name": "上官婉儿",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "513",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "change",
+      "name": "嫦娥",
+      "aliases": [],
+      "default_lanes": [
+        "中路",
+        "对抗路"
+      ],
+      "official_ename": "515",
+      "official_roles": [
+        "法师",
+        "战士"
+      ]
+    },
+    {
+      "id": "zhubajie",
+      "name": "猪八戒",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "511",
+      "official_roles": [
+        "坦克"
+      ]
+    },
+    {
+      "id": "pangu",
+      "name": "盘古",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "529",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "yao",
+      "name": "瑶",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "中路"
+      ],
+      "official_ename": "505",
+      "official_roles": [
+        "辅助",
+        "法师"
+      ]
+    },
+    {
+      "id": "yunzhongjun",
+      "name": "云中君",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "506",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "dongfangyao",
+      "name": "曜",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "打野"
+      ],
+      "official_ename": "522",
+      "official_roles": [
+        "战士",
+        "刺客"
+      ]
+    },
+    {
+      "id": "machao",
+      "name": "马超",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "518",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "xishi",
+      "name": "西施",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "523",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "lubandashi",
+      "name": "鲁班大师",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "对抗路"
+      ],
+      "official_ename": "525",
+      "official_roles": [
+        "辅助",
+        "坦克"
+      ]
+    },
+    {
+      "id": "mengya",
+      "name": "蒙犽",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "524",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "jing",
+      "name": "镜",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "531",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "mengtian",
+      "name": "蒙恬",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "527",
+      "official_roles": [
+        "坦克"
+      ]
+    },
+    {
+      "id": "aguduo",
+      "name": "阿古朵",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "533",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "xialuote",
+      "name": "夏洛特",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "536",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "lan",
+      "name": "澜",
+      "aliases": [],
+      "default_lanes": [
+        "打野",
+        "对抗路"
+      ],
+      "official_ename": "528",
+      "official_roles": [
+        "刺客",
+        "战士"
+      ]
+    },
+    {
+      "id": "sikongzhen",
+      "name": "司空震",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "中路"
+      ],
+      "official_ename": "537",
+      "official_roles": [
+        "战士",
+        "法师"
+      ]
+    },
+    {
+      "id": "ailin",
+      "name": "艾琳",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "155",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "yunying",
+      "name": "云缨",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "打野"
+      ],
+      "official_ename": "538",
+      "official_roles": [
+        "战士",
+        "刺客"
+      ]
+    },
+    {
+      "id": "jinchan",
+      "name": "金蝉",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "540",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "fei",
+      "name": "暃",
+      "aliases": [],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "542",
+      "official_roles": [
+        "刺客"
+      ]
+    },
+    {
+      "id": "sangqi",
+      "name": "桑启",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "中路"
+      ],
+      "official_ename": "534",
+      "official_roles": [
+        "辅助",
+        "法师"
+      ]
+    },
+    {
+      "id": "geya",
+      "name": "戈娅",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "548",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "haiyue",
+      "name": "海月",
+      "aliases": [],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "521",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "zhaohuaizhen",
+      "name": "赵怀真",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "544",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "laixiao",
+      "name": "莱西奥",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "545",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "jixiaoman",
+      "name": "姬小满",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "564",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "yalian",
+      "name": "亚连",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "514",
+      "official_roles": [
+        "战士",
+        "坦克"
+      ]
+    },
+    {
+      "id": "duoliya",
+      "name": "朵莉亚",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "中路"
+      ],
+      "official_ename": "159",
+      "official_roles": [
+        "辅助",
+        "法师"
+      ]
+    },
+    {
+      "id": "hainuo",
+      "name": "海诺",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路",
+        "中路"
+      ],
+      "official_ename": "563",
+      "official_roles": [
+        "战士",
+        "法师"
+      ]
+    },
+    {
+      "id": "aoyin",
+      "name": "敖隐",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "519",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "dasiming",
+      "name": "大司命",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "517",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "yuanliuzhizi_magic",
+      "name": "元流之子(法师)",
+      "aliases": [
+        "元流之子",
+        "元流之子法师"
+      ],
+      "default_lanes": [
+        "中路"
+      ],
+      "official_ename": "582",
+      "official_roles": [
+        "法师"
+      ]
+    },
+    {
+      "id": "yuanliuzhizi_tank",
+      "name": "元流之子(坦克)",
+      "aliases": [
+        "元流之子",
+        "元流之子坦克"
+      ],
+      "default_lanes": [
+        "对抗路",
+        "游走"
+      ],
+      "official_ename": "581",
+      "official_roles": [
+        "坦克"
+      ]
+    },
+    {
+      "id": "shaosiyuan",
+      "name": "少司缘",
+      "aliases": [],
+      "default_lanes": [
+        "游走"
+      ],
+      "official_ename": "577",
+      "official_roles": [
+        "辅助"
+      ]
+    },
+    {
+      "id": "ying",
+      "name": "影",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "558",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "cang",
+      "name": "苍",
+      "aliases": [
+        "成吉思汗"
+      ],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "177",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "kongkonger",
+      "name": "空空儿",
+      "aliases": [],
+      "default_lanes": [
+        "游走"
+      ],
+      "official_ename": "550",
+      "official_roles": [
+        "辅助"
+      ]
+    },
+    {
+      "id": "yuanliuzhizi_archer",
+      "name": "元流之子(射手)",
+      "aliases": [
+        "元流之子",
+        "元流之子射手"
+      ],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "584",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "sunquan",
+      "name": "孙权",
+      "aliases": [],
+      "default_lanes": [
+        "发育路"
+      ],
+      "official_ename": "151",
+      "official_roles": [
+        "射手"
+      ]
+    },
+    {
+      "id": "chicha",
+      "name": "蚩奼",
+      "aliases": [],
+      "default_lanes": [
+        "对抗路"
+      ],
+      "official_ename": "172",
+      "official_roles": [
+        "战士"
+      ]
+    },
+    {
+      "id": "yuanliuzhizi_support",
+      "name": "元流之子(辅助)",
+      "aliases": [
+        "元流之子",
+        "元流之子辅助"
+      ],
+      "default_lanes": [
+        "游走"
+      ],
+      "official_ename": "585",
+      "official_roles": [
+        "辅助"
+      ]
+    },
+    {
+      "id": "dayu",
+      "name": "大禹",
+      "aliases": [],
+      "default_lanes": [
+        "游走",
+        "对抗路"
+      ],
+      "official_ename": "188",
+      "official_roles": [
+        "辅助",
+        "坦克"
+      ]
+    },
+    {
+      "id": "yuanliuzhizi_assassin",
+      "name": "元流之子(刺客)",
+      "aliases": [
+        "元流之子",
+        "元流之子刺客"
+      ],
+      "default_lanes": [
+        "打野"
+      ],
+      "official_ename": "583",
+      "official_roles": [
+        "辅助"
+      ]
+    }
+  ]
+}

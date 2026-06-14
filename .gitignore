@@ -1,0 +1,27 @@
+.DS_Store
+node_modules/
+
+# Build output
+dist/
+apps/web/dist/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Local-first private data
+data/*.sqlite
+data/*.sqlite-*
+data/*.sqlite.*
+data/hok.sqlite
+data/screenshots/
+data/imports/
+
+# Generated static export
+public/export/*
+!public/export/report-data.json
+.vercel
+
+# Codex/agent debug logs
+.codex-logs/

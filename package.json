@@ -1,0 +1,30 @@
+{
+  "name": "hok-five-stack-analytics",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:web": "vite apps/web --host 127.0.0.1 --port 5173",
+    "build:web": "vite build apps/web",
+    "preview:web": "vite preview apps/web --host 127.0.0.1 --port 5173",
+    "db:init": "node scripts/init-db.js",
+    "import:review": "node scripts/import-review-json.js",
+    "period:create": "node scripts/create-report-period.js",
+    "export:static": "node scripts/export-static-data.js",
+    "check:phase2": "node scripts/check-phase-2.js",
+    "check:phase3": "node scripts/check-phase-3.js",
+    "check:phase4": "node scripts/check-phase-4.js",
+    "check:phase5": "node scripts/check-phase-5.js",
+    "check:phase7": "node scripts/check-phase-7.js",
+    "check:phase8": "node scripts/check-phase-8.js",
+    "dev:server": "node server/index.js",
+    "start:server": "node server/index.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "vite": "^7.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {}
+}

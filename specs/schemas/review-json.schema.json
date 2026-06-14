@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.hok-five-stack-analytics/schemas/review-json.schema.json",
+  "title": "HOK single match review JSON",
+  "type": "object",
+  "required": ["source", "match", "players"],
+  "additionalProperties": false,
+  "properties": {
+    "source": {
+      "type": "object",
+      "required": ["batch_id", "local_match_no", "overview_path", "detail_path"],
+      "additionalProperties": false,
+      "properties": {
+        "batch_id": { "type": "string", "minLength": 1 },
+        "local_match_no": { "type": "string", "minLength": 1 },
+        "overview_path": { "type": "string", "minLength": 1 },
+        "detail_path": { "type": "string", "minLength": 1 }
+      }
+    },
+    "match": {
+      "type": "object",
+      "required": [
+        "mode",
+        "played_at",
+        "duration_seconds",
+        "blue_score",
+        "red_score",
+        "winner_side",
+        "friend_side",
+        "friend_result",
+        "include_in_personal_stats",
+        "include_in_pair_stats",
+        "include_in_lineup_stats",
+        "include_in_for_fun_stats",
+        "exclude_reason"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mode": { "type": ["string", "null"] },
+        "played_at": { "type": ["string", "null"], "format": "date-time" },
+        "duration_seconds": { "type": ["integer", "null"], "minimum": 0 },
+        "blue_score": { "type": ["integer", "null"], "minimum": 0 },
+        "red_score": { "type": ["integer", "null"], "minimum": 0 },
+        "winner_side": { "enum": ["blue", "red", null] },
+        "friend_side": { "enum": ["blue", "red", null] },
+        "friend_result": { "enum": ["win", "loss", null] },
+        "include_in_personal_stats": { "$ref": "#/$defs/nullableBoolean" },
+        "include_in_pair_stats": { "$ref": "#/$defs/nullableBoolean" },
+        "include_in_lineup_stats": { "$ref": "#/$defs/nullableBoolean" },
+        "include_in_for_fun_stats": { "$ref": "#/$defs/nullableBoolean" },
+        "exclude_reason": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "players": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": { "$ref": "#/$defs/player" }
+    },
+    "field_confidence": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "codex_notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "nullableString": {
+      "type": ["string", "null"]
+    },
+    "nullableNumber": {
+      "type": ["number", "null"]
+    },
+    "nullableInteger": {
+      "type": ["integer", "null"]
+    },
+    "nullableBoolean": {
+      "type": ["boolean", "null"]
+    },
+    "player": {
+      "type": "object",
+      "required": [
+        "side",
+        "slot",
+        "raw_name",
+        "friend_candidate",
+        "is_friend_candidate",
+        "raw_hero",
+        "hero_id",
+        "hero_name",
+        "rating",
+        "kills",
+        "deaths",
+        "assists",
+        "economy",
+        "damage_dealt",
+        "damage_dealt_pct",
+        "damage_taken",
+        "damage_taken_pct",
+        "team_economy_pct",
+        "participation_pct",
+        "medals",
+        "lane",
+        "lane_source",
+        "lane_confidence",
+        "is_mvp",
+        "is_svp"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "side": { "enum": ["blue", "red"] },
+        "slot": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "raw_name": { "$ref": "#/$defs/nullableString" },
+        "friend_candidate": { "$ref": "#/$defs/nullableString" },
+        "is_friend_candidate": { "$ref": "#/$defs/nullableBoolean" },
+        "raw_hero": { "$ref": "#/$defs/nullableString" },
+        "hero_id": { "$ref": "#/$defs/nullableString" },
+        "hero_name": { "$ref": "#/$defs/nullableString" },
+        "rating": { "$ref": "#/$defs/nullableNumber" },
+        "kills": { "$ref": "#/$defs/nullableInteger" },
+        "deaths": { "$ref": "#/$defs/nullableInteger" },
+        "assists": { "$ref": "#/$defs/nullableInteger" },
+        "economy": { "$ref": "#/$defs/nullableInteger" },
+        "damage_dealt": { "$ref": "#/$defs/nullableInteger" },
+        "damage_dealt_pct": { "$ref": "#/$defs/nullableNumber" },
+        "damage_taken": { "$ref": "#/$defs/nullableInteger" },
+        "damage_taken_pct": { "$ref": "#/$defs/nullableNumber" },
+        "team_economy_pct": { "$ref": "#/$defs/nullableNumber" },
+        "participation_pct": { "$ref": "#/$defs/nullableNumber" },
+        "medals": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "lane": { "enum": ["对抗路", "中路", "打野", "发育路", "游走", null] },
+        "lane_source": { "enum": ["medal", "manual", "hero_default", "manual_guess", null] },
+        "lane_confidence": { "enum": ["high", "medium", "low", null] },
+        "is_mvp": { "$ref": "#/$defs/nullableBoolean" },
+        "is_svp": { "$ref": "#/$defs/nullableBoolean" }
+      }
+    }
+  }
+}

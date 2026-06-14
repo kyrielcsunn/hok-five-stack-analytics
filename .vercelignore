@@ -1,0 +1,15 @@
+.DS_Store
+.vercel/
+node_modules/
+
+# Local build output; Vercel builds this from source.
+dist/
+apps/web/dist/
+
+# Local-first private data and OCR/source artifacts.
+data/*.sqlite
+data/*.sqlite-*
+data/*.sqlite.*
+data/hok.sqlite
+data/screenshots/
+data/imports/

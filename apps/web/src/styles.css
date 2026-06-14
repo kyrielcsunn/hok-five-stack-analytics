@@ -1245,16 +1245,22 @@ tbody tr:last-child td {
     grid-template-columns: 1fr;
   }
 
-  .leader-item,
+  .leader-item {
+    grid-template-columns: 42px minmax(0, 1fr) auto;
+  }
+
   .compact-leader-item {
     grid-template-columns: 42px minmax(0, 1fr);
   }
 
-  .leader-score,
   .leader-item .support-link,
   .compact-leader-item .support-link {
     justify-self: start;
-    grid-column: 2;
+    grid-column: 1 / -1;
+  }
+
+  .leader-score {
+    min-width: 0;
   }
 
   .leader-main strong,
